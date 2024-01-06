@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("./image.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+}
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(63, 63, 63, 0.221);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222
+}
+.input-field {
+  position: relative;
+  margin: 15px 0;
+}
+
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+.input-field i{
+  position: absolute;
+  right: 0;
+  top: 20px;
+
+}
+#errormsg{
+    color: red;
+    font-size: 10px;
+    position: absolute;
+    left: 10px;
+    top: 48px;
+    display: none;
+    font-weight: 600;
+}
+.passicon{
+    cursor: pointer;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  text-align: center;
+  margin-top: 30px;
+  color: #222;
+}
+
+button:hover {
+  color: #fff;
+  border-color: #222;
+  background: rgb(9, 9, 9);
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="formvalidation.html">
+          <h2>New password</h2>
+         
+          <div class="input-field">
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter New password"
+            />
+            <i class="fa-regular fa-eye-slash passicon" style="color: #666"></i>
+            <span id="errormsg"
+            ><i
+              class="fa-solid fa-circle-exclamation"
+              style="color: #eb0a0a; position: static"
+            >
+            </i>
+            Min 7 characters</span>
+
+            <div class="input-field">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter Confrim password"
+                />
+                <i class="fa-regular fa-eye-slash passicon" style="color: #666"></i>
+                <span id="errormsg"
+                ><i
+                  class="fa-solid fa-circle-exclamation"
+                  style="color: #eb0a0a; position: static"
+                >
+                </i>
+                Min 7 characters</span>
+
+            <a href="formvalidation.html"><button onclick="Sumbit()">Sumbit</button></a>
+           
+        </form>
+    </div> 
+    <script src="forget pswd.js"></script>             
+</body>
+</html>
